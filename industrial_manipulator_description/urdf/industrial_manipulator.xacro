@@ -1,0 +1,279 @@
+<?xml version="1.0" ?>
+<robot name="industrial_manipulator" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find industrial_manipulator_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find industrial_manipulator_description)/urdf/industrial_manipulator.trans" />
+<xacro:include filename="$(find industrial_manipulator_description)/urdf/industrial_manipulator.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="3.7056147840780973e-17 0.0 0.0025" rpy="0 0 0"/>
+    <mass value="7.706719478337462"/>
+    <inertia ixx="0.120434" iyy="0.120434" izz="0.240835" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_1">
+  <inertial>
+    <origin xyz="-0.059179768169652223 -0.004771022287952845 0.05995343825363532" rpy="0 0 0"/>
+    <mass value="18.75876915858104"/>
+    <inertia ixx="0.097802" iyy="0.193886" izz="0.132372" ixy="-0.006316" iyz="0.00549" ixz="0.07432"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.0 -0.109" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.0 -0.109" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1">
+  <inertial>
+    <origin xyz="0.1046974308612598 0.037234352020241834 0.09187875343172738" rpy="0 0 0"/>
+    <mass value="6.328393377937569"/>
+    <inertia ixx="0.064903" iyy="0.135193" izz="0.072298" ixy="-0.000601" iyz="-0.000827" ixz="-0.064485"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.149985 0.002086 -0.244154" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.149985 0.002086 -0.244154" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1">
+  <inertial>
+    <origin xyz="-0.04808155967490895 -0.027034211292782478 0.0338349060979814" rpy="0 0 0"/>
+    <mass value="11.40386431538772"/>
+    <inertia ixx="0.015254" iyy="0.067298" izz="0.064227" ixy="-0.001658" iyz="0.000841" ixz="-0.002875"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.102049 -0.001419 -0.486983" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.102049 -0.001419 -0.486983" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_1">
+  <inertial>
+    <origin xyz="-0.04946280137004627 -0.010713567038477822 -0.031774239275904725" rpy="0 0 0"/>
+    <mass value="2.6723759798303592"/>
+    <inertia ixx="0.002212" iyy="0.002818" izz="0.002553" ixy="-3.1e-05" iyz="-2e-05" ixz="-0.000373"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.261449 0.021102 -0.489485" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.261449 0.021102 -0.489485" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4_1">
+  <inertial>
+    <origin xyz="-0.0866191608498616 -0.0016609138359282502 -0.010174002326179987" rpy="0 0 0"/>
+    <mass value="3.7369903850273785"/>
+    <inertia ixx="0.003214" iyy="0.008956" izz="0.009398" ixy="-8.5e-05" iyz="-7e-06" ixz="-0.000737"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.127246 0.029772 -0.505309" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0.127246 0.029772 -0.505309" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger_2_1">
+  <inertial>
+    <origin xyz="-0.032983919736223055 0.0008662017129529706 -0.03696176910752497" rpy="0 0 0"/>
+    <mass value="0.24416324011848"/>
+    <inertia ixx="8.1e-05" iyy="0.000216" izz="0.000164" ixy="1.8e-05" iyz="1.1e-05" ixz="-9.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.376301 -0.007397 -0.432696" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/finger_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.376301 -0.007397 -0.432696" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/finger_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger_1_1">
+  <inertial>
+    <origin xyz="-0.02814114511406679 0.023861962912167335 -0.03310758677914366" rpy="0 0 0"/>
+    <mass value="0.24416324019014932"/>
+    <inertia ixx="9.9e-05" iyy="0.000186" izz="0.000176" ixy="6.3e-05" iyz="3.8e-05" ixz="-7.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.373894 0.074172 -0.431181" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/finger_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.373894 0.074172 -0.431181" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/finger_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_1">
+  <inertial>
+    <origin xyz="-0.005333322866314938 -9.372049889264794e-05 -0.0034244188895766747" rpy="0 0 0"/>
+    <mass value="0.6001743214822736"/>
+    <inertia ixx="0.000311" iyy="0.000253" izz="0.000305" ixy="2e-06" iyz="-1e-06" ixz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.348821 0.032639 -0.433369" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.348821 0.032639 -0.433369" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="robot_base_1">
+  <inertial>
+    <origin xyz="0.0014197141044319395 0.001447931728787637 0.0387094571887376" rpy="0 0 0"/>
+    <mass value="45.31428377967881"/>
+    <inertia ixx="0.286423" iyy="0.286673" izz="0.523195" ixy="0.006278" iyz="-0.000329" ixz="-0.000294"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/robot_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_metallic_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://industrial_manipulator_description/meshes/robot_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="twist_1" type="continuous">
+  <origin xyz="0.0 -0.0 0.104" rpy="0 0 0"/>
+  <parent link="robot_base_1"/>
+  <child link="link_1_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="rev_1" type="continuous">
+  <origin xyz="-0.149985 -0.002086 0.135154" rpy="0 0 0"/>
+  <parent link="link_1_1"/>
+  <child link="link_2_1"/>
+  <axis xyz="-0.013907 0.999903 -0.0"/>
+</joint>
+
+<joint name="rev_2" type="continuous">
+  <origin xyz="0.252034 0.003505 0.242829" rpy="0 0 0"/>
+  <parent link="link_2_1"/>
+  <child link="link_3_1"/>
+  <axis xyz="0.013907 -0.999903 0.0"/>
+</joint>
+
+<joint name="rev_3" type="continuous">
+  <origin xyz="-0.134203 0.00867 -0.015824" rpy="0 0 0"/>
+  <parent link="link_4_1"/>
+  <child link="link_5_1"/>
+  <axis xyz="-0.013084 0.99989 -0.007"/>
+</joint>
+
+<joint name="twist_2" type="continuous">
+  <origin xyz="-0.229295 -0.031191 0.018326" rpy="0 0 0"/>
+  <parent link="link_3_1"/>
+  <child link="link_4_1"/>
+  <axis xyz="-0.993075 -0.013812 -0.116669"/>
+</joint>
+
+<joint name="twist_3" type="continuous">
+  <origin xyz="-0.02748 0.040036 -0.000673" rpy="0 0 0"/>
+  <parent link="link_6_1"/>
+  <child link="finger_2_1"/>
+  <axis xyz="0.539644 0.031546 -0.841302"/>
+</joint>
+
+<joint name="finger_rev_1" type="continuous">
+  <origin xyz="-0.025073 -0.041533 -0.002188" rpy="0 0 0"/>
+  <parent link="link_6_1"/>
+  <child link="finger_1_1"/>
+  <axis xyz="0.539644 0.031546 -0.841302"/>
+</joint>
+
+<joint name="finger_rev_2" type="continuous">
+  <origin xyz="-0.087372 -0.011537 -0.056116" rpy="0 0 0"/>
+  <parent link="link_5_1"/>
+  <child link="link_6_1"/>
+  <axis xyz="-0.841377 -0.014792 -0.540247"/>
+</joint>
+
+<joint name="Rigid35" type="fixed">
+  <origin xyz="0.0 0.0 0.005" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="robot_base_1"/>
+</joint>
+
+</robot>
