@@ -249,21 +249,21 @@
   <axis xyz="-0.993075 -0.013812 -0.116669"/>
 </joint>
 
-<joint name="twist_3" type="continuous">
+<joint name="finger_rev_1" type="continuous">
   <origin xyz="-0.02748 0.040036 -0.000673" rpy="0 0 0"/>
   <parent link="link_6_1"/>
   <child link="finger_2_1"/>
   <axis xyz="0.539644 0.031546 -0.841302"/>
 </joint>
 
-<joint name="finger_rev_1" type="continuous">
+<joint name="finger_rev_2" type="continuous">
   <origin xyz="-0.025073 -0.041533 -0.002188" rpy="0 0 0"/>
   <parent link="link_6_1"/>
   <child link="finger_1_1"/>
   <axis xyz="0.539644 0.031546 -0.841302"/>
 </joint>
 
-<joint name="finger_rev_2" type="continuous">
+<joint name="twist_3" type="continuous">
   <origin xyz="-0.087372 -0.011537 -0.056116" rpy="0 0 0"/>
   <parent link="link_5_1"/>
   <child link="link_6_1"/>

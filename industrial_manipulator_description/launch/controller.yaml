@@ -25,10 +25,6 @@ industrial_manipulator_controller:
     type: effort_controllers/JointPositionController
     joint: twist_2
     pid: {p: 100.0, i: 0.01, d: 10.0}
-  twist_3_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: twist_3
-    pid: {p: 100.0, i: 0.01, d: 10.0}
   finger_rev_1_position_controller:
     type: effort_controllers/JointPositionController
     joint: finger_rev_1
@@ -36,4 +32,8 @@ industrial_manipulator_controller:
   finger_rev_2_position_controller:
     type: effort_controllers/JointPositionController
     joint: finger_rev_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  twist_3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: twist_3
     pid: {p: 100.0, i: 0.01, d: 10.0}

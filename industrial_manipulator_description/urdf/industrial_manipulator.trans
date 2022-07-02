@@ -56,17 +56,6 @@
   </actuator>
 </transmission>
 
-<transmission name="twist_3_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="twist_3">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="twist_3_actr">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-
 <transmission name="finger_rev_1_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="finger_rev_1">
@@ -84,6 +73,17 @@
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="finger_rev_2_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="twist_3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="twist_3">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="twist_3_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
